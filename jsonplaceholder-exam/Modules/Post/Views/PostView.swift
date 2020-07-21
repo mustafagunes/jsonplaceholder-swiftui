@@ -10,6 +10,10 @@ import SwiftUI
 
 struct PostView: View {
     
+    // MARK: - Global Definitions
+    @ObservedObject private var viewModel = PostViewModel()
+    
+    // MARK: - UI
     var body: some View {
         Text("Hello World")
     }
