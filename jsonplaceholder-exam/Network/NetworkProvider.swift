@@ -20,12 +20,12 @@ class NetworkProvider {
     /// - Parameter endpoint: The endpoint to use.
     /// - Returns: An `AnyPublisher` with the data for the request or an error.
     func dataTask(withEndpoint endpoint: Endpoint) -> AnyPublisher<Data, Error> {
-        guard let url = URL(string: "\(Constant.baseURL)\(endpoint.rawValue)") else {
+        guard let url = URL(string: "\(Constant.baseURL)\(endpoint.rawValue)") else { // AnyPublisher = Observarvable
             return Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
         }
         
-        return URLSession.shared.dataTaskPublisher(for: url)
-        .receive(on: DispatchQueue.global()) //Observe Thread
+        return URLSession.shared.dataTaskPublisher(for: url) // dataTaskPublisher combine extension
+        .receive(on: DispatchQueue.global()) // Observe Thread
         .tryMap { (data, response) -> Data in
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                 throw NetworkError.statusCode
