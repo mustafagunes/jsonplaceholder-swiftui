@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFE1E63B24C82ECD00426BF0 /* PostItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1E63A24C82ECD00426BF0 /* PostItemView.swift */; };
+		EFE1E63D24C82EDD00426BF0 /* PostItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1E63C24C82EDD00426BF0 /* PostItemViewModel.swift */; };
 		EFE367B824C7263E00FCF8FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE367B724C7263E00FCF8FA /* AppDelegate.swift */; };
 		EFE367BA24C7263E00FCF8FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE367B924C7263E00FCF8FA /* SceneDelegate.swift */; };
 		EFE367BE24C7264200FCF8FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE367BD24C7264200FCF8FA /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EFE1E63A24C82ECD00426BF0 /* PostItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItemView.swift; sourceTree = "<group>"; };
+		EFE1E63C24C82EDD00426BF0 /* PostItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItemViewModel.swift; sourceTree = "<group>"; };
 		EFE367B424C7263E00FCF8FA /* jsonplaceholder-exam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jsonplaceholder-exam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE367B724C7263E00FCF8FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFE367B924C7263E00FCF8FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EFE1E63824C82EAB00426BF0 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1E63924C82EBA00426BF0 /* Items */,
+				EFE367DE24C72BC700FCF8FA /* PostView.swift */,
+				EFE367E024C7379300FCF8FA /* PostViewModel.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		EFE1E63924C82EBA00426BF0 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1E63A24C82ECD00426BF0 /* PostItemView.swift */,
+				EFE1E63C24C82EDD00426BF0 /* PostItemViewModel.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		EFE367AB24C7263D00FCF8FA = {
 			isa = PBXGroup;
 			children = (
@@ -138,8 +161,7 @@
 		EFE367D324C7278C00FCF8FA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EFE367DE24C72BC700FCF8FA /* PostView.swift */,
-				EFE367E024C7379300FCF8FA /* PostViewModel.swift */,
+				EFE1E63824C82EAB00426BF0 /* Post */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,9 +239,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFE367D524C727B800FCF8FA /* NetworkError.swift in Sources */,
+				EFE1E63B24C82ECD00426BF0 /* PostItemView.swift in Sources */,
 				EFE367D924C727DA00FCF8FA /* PostNetworkProvider.swift in Sources */,
 				EFE367DF24C72BC700FCF8FA /* PostView.swift in Sources */,
 				EFE367D724C727C900FCF8FA /* NetworkProvider.swift in Sources */,
+				EFE1E63D24C82EDD00426BF0 /* PostItemViewModel.swift in Sources */,
 				EFE367B824C7263E00FCF8FA /* AppDelegate.swift in Sources */,
 				EFE367DB24C728D500FCF8FA /* Endpoints.swift in Sources */,
 				EFE367E124C7379300FCF8FA /* PostViewModel.swift in Sources */,
